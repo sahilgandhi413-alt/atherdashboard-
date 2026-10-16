@@ -791,8 +791,8 @@ with st.sidebar:
                      f'<span style="font-size:26px;font-weight:800;letter-spacing:2px">ATHER</span></div>'
                      f'<div style="color:{EV_THEME["primary"]};font-size:11px;font-weight:600;letter-spacing:1px">CLEAN ENERGY. SMARTER MOBILITY.</div>'),
                 unsafe_allow_html=True)
-    page = st.radio("Navigate", PAGES, format_func=lambda p: f"{PAGE_ICONS[p]}  {p}", label_visibility="collapsed")
-
+       page = st.radio("Navigate", PAGES, format_func=lambda p: f"{PAGE_ICONS[p]}  {p}", label_visibility="collapsed")
+    st.write(raw_for_filters.columns.tolist())
     st.markdown("### 🔽 Filters")
     f_model = st.multiselect("Model", sorted(raw_for_filters.Model.unique()))
     f_year = st.multiselect("Year", sorted(set(pd.to_datetime(raw_for_filters.SalesMonth + "-01").dt.year)))
