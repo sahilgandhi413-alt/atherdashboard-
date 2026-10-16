@@ -792,7 +792,7 @@ with st.sidebar:
                      f'<div style="color:{EV_THEME["primary"]};font-size:11px;font-weight:600;letter-spacing:1px">CLEAN ENERGY. SMARTER MOBILITY.</div>'),
                 unsafe_allow_html=True)
     page = st.radio("Navigate", PAGES, format_func=lambda p: f"{PAGE_ICONS[p]}  {p}", label_visibility="collapsed")
-        st.write(raw_for_filters.columns.tolist())
+    st.write(raw_for_filters.columns.tolist())
     st.stop()
     st.markdown("### 🔽 Filters")
     f_model = st.multiselect("Model", sorted(raw_for_filters.Model.unique()))
